@@ -1,0 +1,62 @@
+// ====================================================================
+// Default Bootstrap variables (pertahankan jika Anda suka)
+// ====================================================================
+$body-bg: #f8fafc; // Latar belakang body default Laravel
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+
+// ====================================================================
+// OVERRIDE VARIABEL BOOTSTRAP UNTUK TEMA ECOPANTAU YANG LEBIH KEREN
+// ====================================================================
+
+// --- Palet Warna Utama ---
+// Warna yang lebih lembut atau lebih dalam dari default Bootstrap
+$blue:        #007bff;   // Default Bootstrap Blue
+$indigo:      #6610f2;
+$purple:      #6f42c1;
+$pink:        #e83e8c;
+$red:         #dc3545;   // Default Bootstrap Red
+$orange:      #fd7e14;
+$yellow:      #ffc107;   // Default Bootstrap Yellow
+$green:       #28a745;   // Default Bootstrap Green
+$teal:        #20c997;
+$cyan:        #17a2b8;   // Default Bootstrap Cyan
+
+// --- Warna Semantik (Override Bootstrap) ---
+// Pilih dari palet di atas atau definisikan nilai baru
+$primary:       #3490dc; // Biru yang sedikit berbeda (Laravel default blue)
+$secondary:     #6c757d; // Abu-abu default
+$success:       #38c172; // Hijau yang sedikit berbeda (Laravel default green)
+$info:          #6cb2eb; // Biru muda yang sedikit berbeda
+$warning:       #ffed4a; // Kuning yang sedikit berbeda
+$danger:        #e3342f; // Merah yang sedikit berbeda
+$light:         #f8f9fa; // Default light
+$dark:          #343a40; // Default dark
+
+// --- Ukuran & Bentuk ---
+$border-radius:           .5rem; // Radius sudut yang lebih seragam
+$border-radius-sm:        .3rem;
+$border-radius-lg:        .7rem;
+
+// --- Tipografi ---
+$font-family-sans-serif: 'Inter', sans-serif; // Font yang lebih modern
+// Pastikan Anda mengimpor font ini di resources/sass/app.scss atau di layouts/app.blade.php
+// Contoh: @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+$headings-font-weight: 600; // Heading lebih tebal
+$line-height-base: 1.7; // Spasi antar baris lebih nyaman
+
+// --- Variabel Kustom Tambahan ---
+$ecopantau-bg-light: #f5f8fA; // Latar belakang abu-abu sangat muda
+$ecopantau-hero-bg: lighten($primary, 40%); // Hero section dari warna primary yang cerah
+$ecopantau-card-header: darken($light, 5%); // Header card sedikit lebih gelap dari light
+
+// ====================================================================
+// JANGAN MENGHAPUS ATAU MENGUBAH DI BAWAH INI KECUALI ANDA PAHAM SASS BOOTSTRAP
+// ====================================================================
+// Import Bootstrap functions (jika Anda ingin menggunakannya di sini)
+// @import "bootstrap/scss/functions";
+// @import "bootstrap/scss/variables-dark"; // Jika Anda memiliki mode gelap
+
+// Ini biasanya diimpor oleh bootstrap.scss, biarkan saja

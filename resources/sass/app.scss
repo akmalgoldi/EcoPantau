@@ -1,0 +1,17 @@
+// 1. Fonts (Penting untuk memuat font Anda di awal)
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// Jika Anda ingin font kustom lain dari Google Fonts, import di sini:
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+// 2. Variables (Penting: Impor ini SEBELUM Bootstrap agar override variabel bekerja)
+@import 'variables'; // Mengimpor _variables.scss Anda
+
+
+// 3. Bootstrap (Ini akan menggunakan variabel yang sudah di-override dari atas)
+@import 'bootstrap/scss/bootstrap';
+
+
+// 4. Custom styles for your application (Ini harus diimpor SETELAH Bootstrap untuk menimpa gaya spesifik)
+@import 'custom'; // Mengimpor _custom.scss Anda

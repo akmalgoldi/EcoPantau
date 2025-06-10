@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- Tetap gunakan layout dasar untuk navbar, footer, dan Bootstrap --}}
+@extends('layouts.app') 
 
 @section('content')
 
@@ -68,11 +68,9 @@
     </div>
 </section>
 
-{{-- Anda bisa menambahkan footer di sini jika app.blade.php tidak memiliki footer global --}}
 
 @endsection
 
 @section('scripts')
-    {{-- Hapus baris ini karena Bootstrap Icons sudah di-load di layouts/app.blade.php (di bagian <head>) --}}
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> --}}
+    
 @endsection

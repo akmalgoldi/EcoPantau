@@ -1,29 +1,36 @@
-// Ini adalah file untuk gaya CSS/SCSS kustom Anda.
-// Variabel Bootstrap di-override di _variables.scss.
-
 // === Gaya Umum Aplikasi ===
 body {
-    background-color: $ecopantau-bg-light; // Warna latar belakang global dari _variables.scss
-    font-family: $font-family-sans-serif; // Menggunakan font dari _variables.scss
-    line-height: $line-height-base; // Menggunakan line-height dari _variables.scss
-    color: $dark; // Warna teks default agak gelap
+    background-color: $ecopantau-bg-light; 
+    font-family: $font-family-sans-serif; 
+    line-height: $line-height-base; 
+    color: $dark; 
+    -webkit-font-smoothing: antialiased; // Memperhalus rendering font
+    -moz-osx-font-smoothing: grayscale; // Memperhalus rendering font
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: $headings-font-weight; // Menggunakan font-weight heading dari _variables.scss
     color: $dark; // Warna heading agak gelap
+    line-height: 1.2; // Sedikit lebih rapat untuk judul
+    margin-bottom: .5rem; // Padding bawah default
+}
+
+// Transisi global untuk efek hover/fokus yang halus
+a, button, .card, .form-control {
+    transition: all 0.2s ease-in-out;
 }
 
 // === Gaya Navbar ===
 .navbar {
     background-color: white !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); // Bayangan yang lebih dalam
-    padding-top: .75rem; // Sedikit padding lebih
-    padding-bottom: .75rem; // Sedikit padding lebih
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Bayangan lebih menonjol
+    padding-top: .85rem; // Sedikit padding lebih
+    padding-bottom: .85rem; // Sedikit padding lebih
+
     .navbar-nav .nav-link {
-        color: rgba($dark, .7); // Warna link nav agak transparan
+        color: rgba($dark, .75); // Warna link nav agak transparan
         font-weight: 500;
-        transition: color 0.2s ease-in-out;
+        font-size: 1.05rem; // Sedikit lebih besar
         &:hover {
             color: $primary; // Warna link nav saat hover
         }
@@ -34,32 +41,34 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     font-weight: bold;
     color: $dark; // Warna teks brand dari _variables.scss
-    font-size: 1.25rem; // Ukuran font brand
+    font-size: 1.35rem; // Ukuran font brand sedikit lebih besar
 }
 
 // === Gaya Card ===
 .card-header {
     background-color: $ecopantau-card-header; // Dari _variables.scss
-    font-weight: bold;
+    font-weight: $headings-font-weight; // Gunakan font-weight heading
     color: $dark;
-    padding: 1rem 1.5rem; // Padding header card
+    padding: 1.1rem 1.5rem; // Padding header card
     border-bottom: 1px solid rgba(0, 0, 0, 0.08); // Border yang lebih halus
+    font-size: 1.15rem; // Ukuran font header card
 }
 .card {
     border: none;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); // Bayangan lebih menonjol
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Bayangan lebih dalam dan menonjol
     border-radius: $border-radius-lg; // Radius card lebih besar
-    overflow: hidden; // Pastikan konten tidak keluar dari radius
+    overflow: hidden;
 }
 
 // === Gaya Tombol ===
 .btn {
     font-weight: 500;
-    border-radius: $border-radius; // Radius default tombol
-    padding: .75rem 1.5rem; // Padding tombol
+    border-radius: $border-radius;
+    padding: .85rem 1.75rem; // Padding tombol sedikit lebih besar
+    font-size: 1rem; // Ukuran font tombol
     transition: all 0.3s ease-in-out;
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px); // Efek naik sedikit lebih terasa saat hover
     }
 }
 
@@ -80,30 +89,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-// Gaya Hover untuk tombol lain (menggunakan variabel warna dari _variables.scss)
+// Gaya Hover untuk tombol lain
 .btn-success {
-    &:hover {
-        background-color: darken($success, 8%);
-        border-color: darken($success, 10%);
-    }
+    &:hover { background-color: darken($success, 8%); border-color: darken($success, 10%); }
 }
 .btn-info {
-    &:hover {
-        background-color: darken($info, 8%);
-        border-color: darken($info, 10%);
-    }
+    &:hover { background-color: darken($info, 8%); border-color: darken($info, 10%); }
 }
 .btn-warning {
-    &:hover {
-        background-color: darken($warning, 8%);
-        border-color: darken($warning, 10%);
-    }
+    &:hover { background-color: darken($warning, 8%); border-color: darken($warning, 10%); }
 }
 .btn-danger {
-    &:hover {
-        background-color: darken($danger, 8%);
-        border-color: darken($danger, 10%);
-    }
+    &:hover { background-color: darken($danger, 8%); border-color: darken($danger, 10%); }
 }
 .btn-light {
     color: $dark;
@@ -116,16 +113,19 @@ h1, h2, h3, h4, h5, h6 {
 
 // === Gaya Badge (untuk status laporan) ===
 .badge {
-    font-size: .8em;
-    padding: .5em .75em;
-    border-radius: $border-radius-sm;
+    font-size: .85em;
+    padding: .6em .9em; // Padding badge lebih besar
+    border-radius: $border-radius; // Gunakan radius default tombol
+    font-weight: 600; // Lebih tebal
 }
 
 // === Gaya Form Control ===
 .form-control {
     border-radius: $border-radius-sm; // Input form sedikit membulat
+    padding: .75rem 1rem; // Padding input
+    font-size: 1rem; // Ukuran font input
     &:focus {
-        border-color: lighten($primary, 15%);
+        border-color: lighten($primary, 10%); // Border fokus lebih jelas
         box-shadow: 0 0 0 .25rem rgba($primary, .25); // Fokus shadow lebih halus
     }
 }
@@ -136,24 +136,46 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
+// === Gaya Tabel ===
+.table {
+    font-size: .95rem; // Ukuran font tabel sedikit lebih kecil
+    th {
+        font-weight: 600; // Header tabel lebih tebal
+        background-color: lighten($ecopantau-card-header, 3%); // Latar belakang header tabel
+        border-color: rgba(0, 0, 0, 0.08); // Border header tabel
+        color: $dark;
+    }
+    td {
+        vertical-align: middle; // Konten sel di tengah vertikal
+        border-color: rgba(0, 0, 0, 0.05); // Border sel lebih halus
+    }
+    &.table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba($primary, .03); // Warna stripe lebih halus
+    }
+    &.table-hover tbody tr:hover {
+        background-color: rgba($primary, .08); // Warna hover lebih jelas
+    }
+}
+
+
 // === Gaya Section Tambahan (untuk welcome.blade.php) ===
 header.bg-light {
-    background-color: $ecopantau-hero-bg !important;
+    background-color: lighten($primary, 40%) !important;
     padding-top: 6rem;
     padding-bottom: 6rem;
     .display-5 {
-        color: $dark; // Judul utama lebih gelap
+        color: $dark;
         font-size: 3.5rem;
         font-weight: $headings-font-weight;
     }
     .lead {
-        color: rgba($dark, .8); // Deskripsi agak transparan
+        color: rgba($dark, .8);
         font-size: 1.25rem;
     }
-    .btn-primary, .btn-outline-primary { // Tombol di hero section
+    .btn-primary, .btn-outline-primary {
         padding: 1rem 2.5rem;
         font-size: 1.15rem;
-        border-radius: $border-radius-lg; // Tombol hero lebih membulat
+        border-radius: $border-radius-lg;
     }
 }
 
@@ -162,13 +184,13 @@ header.bg-light {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 4.5rem; // Sedikit lebih besar
-    width: 4.5rem; // Sedikit lebih besar
-    font-size: 2rem; // Ukuran ikon lebih besar
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 2rem;
     background-color: $primary;
     color: white;
-    border-radius: $border-radius-lg; // Lebih membulat
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Bayangan lebih dalam
+    border-radius: $border-radius-lg;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Kelas kustom baru (jika digunakan) */
@@ -185,43 +207,57 @@ header.bg-light {
     display: flex;
     justify-content: center;
     align-items: center;
-    // min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 110px);
     padding: 20px 0;
-    background-color: $ecopantau-bg-light; 
-    min-height: 100%;
+    background-color: $ecopantau-bg-light; // Menggunakan background global body untuk konsistensi
 }
 
 .login-card, .register-card {
     width: 100%;
     max-width: 450px;
-    border-radius: $border-radius-lg; // Card login/register lebih membulat
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); // Bayangan lebih dalam
+    border-radius: $border-radius-lg;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .login-header, .register-header {
     background-color: $primary;
     color: white;
     text-align: center;
-    padding: 1.5rem; // Padding lebih besar
+    padding: 1.5rem;
     border-top-left-radius: $border-radius-lg;
     border-top-right-radius: $border-radius-lg;
-    font-size: 1.8rem; // Ukuran font lebih besar
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .login-logo, .register-logo {
     text-align: center;
-    margin-bottom: 30px; // Margin lebih besar
+    margin-bottom: 30px;
+}
+
+.login-logo img, .register-logo img {
+    max-width: 150px;
+    height: auto;
 }
 
 .login-logo h1, .register-logo h1 {
-    font-size: 2.5rem; // Ukuran font lebih besar
+    font-size: 2.5rem;
     color: $dark;
     margin-top: 10px;
 }
 
 .card-body {
     padding: 30px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary { // Mengatasi potensi konflik dengan btn-primary global
+    &.btn-lg { // Khusus untuk tombol besar
+        padding: 10px 20px;
+    }
 }
 
 .forgot-password-link, .register-link, .login-link {

@@ -115,18 +115,13 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek EcoPantau di lingkun
 
 Aplikasi sekarang dapat diakses melalui `http://localhost:8000` (atau port lain yang ditampilkan oleh `php artisan serve`).
 
-### Kredensial Admin Default (Setelah `php artisan migrate --seed` dan pembuatan via Tinker)
-
-* **Email:** `admin@ecopantau.com` (atau email yang Anda buat via Artisan Tinker)
-* **Password:** `password123` (atau password yang Anda buat via Artisan Tinker)
-
 ## 🤝 Kontributor Tim
 
 Berikut adalah anggota tim yang berkontribusi pada proyek EcoPantau:
 
-* **Akmal Goldi Bazarghan** - Owner / Lead Developer
-* **M.Alan Daulay** - Backend Developer
-* **Muhammad Dzaky Danarta** - Frontend Developer / UI/UX Designer
-* **Muhammad Yusran Abdullah** - Database Administrator / DevOps Support
+* **Akmal Goldi Bazarghan**
+* **M.Alan Daulay** 
+* **Muhammad Dzaky Danarta** 
+* **Muhammad Yusran Abdullah** 
 
 ---

@@ -1,7 +1,5 @@
 # EcoPantau – Sistem Pemantauan Sampah RT/RW
 
-![EcoPantau Logo Placeholder](https://via.placeholder.com/150/007bff/FFFFFF?text=EcoPantau)
-
 EcoPantau adalah sebuah aplikasi berbasis web sederhana yang dirancang untuk mengatasi permasalahan penumpukan sampah liar di lingkungan Rukun Tetangga (RT) dan Rukun Warga (RW). Sistem ini memfasilitasi komunikasi dan koordinasi antara warga sebagai pelapor dan pengurus RT/RW sebagai pihak yang bertanggung jawab atas penanganan sampah.
 
 ## 🎯 Tujuan Proyek

@@ -80,9 +80,9 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek EcoPantau di lingkun
 4.  **Konfigurasi Database di `.env`:**
     Buka file `.env` dan sesuaikan detail koneksi database Anda:
     ```dotenv
-    DB_DATABASE=ecopantau_db # Ganti dengan nama database Anda
-    DB_USERNAME=root         # Ganti dengan username database Anda
-    DB_PASSWORD=             # Ganti dengan password database Anda
+    DB_DATABASE=ecopantau_db 
+    DB_USERNAME=root         
+    DB_PASSWORD=             
     ```
 
 5.  **Jalankan Migrasi Database dan Seed Data:**

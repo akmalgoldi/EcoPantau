@@ -27,8 +27,6 @@ EcoPantau adalah sebuah aplikasi berbasis web sederhana yang dirancang untuk men
 
 ## 💻 Teknologi yang Digunakan
 
-🛠️ Teknologi yang Digunakan
-
 * Backend: Laravel 11
 * Frontend: Blade + Bootstrap 5 + Sass (SCSS)
 * Database: MySQL

@@ -4,17 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card shadow-sm"> {{-- Tambahkan shadow-sm --}}
+            <div class="card shadow-sm"> 
                 <div class="card-header">Detail Laporan Sampah #{{ $report->id }}</div>
 
                 <div class="card-body">
                     @if (session('success'))
-                        <div class="alert alert-success border-0 shadow-sm" role="alert"> {{-- Tambahkan border-0 shadow-sm --}}
+                        <div class="alert alert-success border-0 shadow-sm" role="alert"> 
                             {{ session('success') }}
                         </div>
                     @endif
                     @if (session('error'))
-                        <div class="alert alert-danger border-0 shadow-sm" role="alert"> {{-- Tambahkan border-0 shadow-sm --}}
+                        <div class="alert alert-danger border-0 shadow-sm" role="alert"> 
                             {{ session('error') }}
                         </div>
                     @endif
@@ -57,7 +57,7 @@
                         </div>
                     @endif
 
-                    <hr class="my-4"> {{-- Tambahkan margin-y --}}
+                    <hr class="my-4"> 
 
                     <h5 class="mb-3">Ubah Status Laporan & Catatan Penanganan</h5>
                     <form action="{{ route('admin.reports.update-status', $report->id) }}" method="POST">
@@ -78,7 +78,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="mb-4"> {{-- Tambahkan mb-4 --}}
+                        <div class="mb-4"> 
                             <label for="admin_notes" class="form-label">
                                 <i class="bi bi-pencil-square me-2"></i>Catatan Penanganan (Opsional)
                             </label>
@@ -87,7 +87,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> {{-- Menggunakan d-grid --}}
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
                             <button type="submit" class="btn btn-primary">
                                 <i class="bi bi-arrow-counterclockwise me-2"></i>Update Status
                             </button>

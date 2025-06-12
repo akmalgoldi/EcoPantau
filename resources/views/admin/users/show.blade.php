@@ -40,7 +40,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($user->reports->sortByDesc('created_at')->take(5) as $report) {{-- Tampilkan 5 laporan terbaru --}}
+                                    @foreach ($user->reports->sortByDesc('created_at')->take(5) as $report) 
                                         <tr>
                                             <td>{{ $report->id }}</td>
                                             <td>{{ Str::limit($report->location, 30) }}</td>
@@ -67,7 +67,7 @@
                         <a href="{{ route('admin.reports.index', ['user_id' => $user->id]) }}" class="btn btn-sm btn-outline-primary mt-2">
                             Lihat Semua Laporan Pengguna Ini
                         </a>
-                        {{-- Catatan: Rute admin.reports.index harus bisa memfilter berdasarkan user_id agar tombol ini berfungsi --}}
+                        
                     @endif
 
                     <hr class="my-4">

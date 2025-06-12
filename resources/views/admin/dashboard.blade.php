@@ -92,13 +92,13 @@
 
                     <h4 class="mb-4 text-dark">Distribusi Status Laporan</h4>
                     <div class="row">
-                        <div class="col-md-8 offset-md-2"> {{-- Sedikit lebih lebar --}}
+                        <div class="col-md-8 offset-md-2"> 
                             <div class="card shadow-sm h-100 border-0">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Laporan Berdasarkan Status</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div style="height: 300px;"> {{-- Berikan tinggi eksplisit untuk grafik --}}
+                                    <div style="height: 300px;"> 
                                         <canvas id="reportStatusChart"></canvas>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
         const ctx = document.getElementById('reportStatusChart');
         if (ctx) {
             new Chart(ctx, {
-                type: 'doughnut', // Atau 'pie'
+                type: 'doughnut', 
                 data: {
                     labels: statusLabels,
                     datasets: [{
@@ -148,13 +148,13 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false, // Penting untuk kontrol ukuran
+                    maintainAspectRatio: false, 
                     plugins: {
                         legend: {
-                            position: 'bottom', // Posisi legend
+                            position: 'bottom',
                             labels: {
                                 font: {
-                                    size: 14 // Ukuran font legend
+                                    size: 14 
                                 }
                             }
                         },
@@ -162,7 +162,7 @@
                             display: true,
                             text: 'Persentase Laporan per Status',
                             font: {
-                                size: 16 // Ukuran font judul grafik
+                                size: 16 
                             },
                             padding: {
                                 top: 10,

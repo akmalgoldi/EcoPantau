@@ -1,20 +1,13 @@
-// ====================================================================
-// Default Bootstrap variables (dipertahankan atau disesuaikan dari Laravel default)
-// ====================================================================
-// Default background color for the body.
-$body-bg: #f8fafc; // Latar belakang body default Laravel
-// Base font size for Bootstrap components.
+
+$body-bg: #f8fafc; 
 $font-size-base: 0.9rem;
-// Base line height for text.
 $line-height-base: 1.6;
 
 
 // ====================================================================
-// OVERRIDE VARIABEL BOOTSTRAP UNTUK TEMA ECOPANTAU
+// VARIABEL BOOTSTRAP UNTUK TEMA ECOPANTAU
 // ====================================================================
 
-// --- Palet Warna Dasar (Diambil dari Bootstrap Defaults atau disesuaikan) ---
-// Ini adalah warna dasar yang akan di-override jika Anda ingin mengubah warna bawaan Bootstrap.
 $blue:        #007bff;
 $indigo:      #6610f2;
 $purple:      #6f42c1;
@@ -26,40 +19,29 @@ $green:       #28a745;
 $teal:        #20c997;
 $cyan:        #17a2b8;
 
-// --- Skema Warna Semantik Aplikasi EcoPantau ---
-// Ini adalah warna yang akan digunakan oleh Bootstrap untuk primary, success, info, dll.
-// Nilai diambil dari palet warna di atas atau didefinisikan secara khusus.
-$primary:       #3490dc; // Biru yang sedikit berbeda (Laravel default blue)
-$secondary:     #6c757d; // Abu-abu default Bootstrap
-$success:       #38c172; // Hijau yang sedikit berbeda (Laravel default green)
-$info:          #6cb2eb; // Biru muda yang sedikit berbeda
-$warning:       #ffed4a; // Kuning yang sedikit berbeda
-$danger:        #e3342f; // Merah yang sedikit berbeda
-$light:         #f8f9fa; // Warna terang (default light)
-$dark:          #343a40; // Warna gelap (default dark)
+$primary:       #3490dc; 
+$secondary:     #6c757d; 
+$success:       #38c172; 
+$info:          #6cb2eb; 
+$warning:       #ffed4a; 
+$danger:        #e3342f; 
+$light:         #f8f9fa; 
+$dark:          #343a40; 
 
 // --- Ukuran & Bentuk Global ---
-// Konsistensi radius sudut untuk elemen UI.
-$border-radius:           .5rem;   // Radius standar
-$border-radius-sm:        .3rem;   // Radius kecil
-$border-radius-lg:        .7rem;   // Radius besar (digunakan untuk card dan tombol hero)
+$border-radius:           .5rem;   
+$border-radius-sm:        .3rem;   
+$border-radius-lg:        .7rem;   
 
 // --- Tipografi Global ---
-// Font dan berat font untuk seluruh aplikasi.
-$font-family-sans-serif: 'Inter', sans-serif; // Font yang lebih modern
-$headings-font-weight: 600; // Heading lebih tebal
-$line-height-base: 1.7;     // Spasi antar baris lebih nyaman
+$font-family-sans-serif: 'Inter', sans-serif; 
+$headings-font-weight: 600;
+$line-height-base: 1.7;     
 
 // --- Variabel Kustom Tambahan untuk Tema EcoPantau ---
-// Variabel spesifik untuk elemen-elemen di aplikasi EcoPantau yang tidak langsung di-override oleh Bootstrap.
-$ecopantau-bg-light: #f5f8fA;       // Latar belakang body umum (abu-abu sangat muda/hampir putih)
-$ecopantau-hero-bg: lighten($primary, 40%); // Latar belakang hero section (biru primary yang sangat cerah)
-$ecopantau-card-header: darken($light, 5%); // Latar belakang header card (sedikit lebih gelap dari $light)
+$ecopantau-bg-light: #f5f8fA;       
+$ecopantau-hero-bg: lighten($primary, 40%);
+$ecopantau-card-header: darken($light, 5%); 
 
-// ====================================================================
-// PENTING: JANGAN MENGHAPUS ATAU MENGUBAH KODE DI BAWAH INI
-// KECUALI ANDA PAHAM CARA KERJA SASS BOOTSTRAP INTERNAL.
-// ====================================================================
-// Ini biasanya diimpor oleh bootstrap.scss, biarkan saja
 // @import "bootstrap/scss/functions";
 // @import "bootstrap/scss/variables-dark"; // Jika Anda memiliki mode gelap

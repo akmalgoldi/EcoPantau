@@ -4,17 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card shadow-sm"> {{-- Tambahkan shadow-sm --}}
+            <div class="card shadow-sm"> 
                 <div class="card-header">Edit Pengguna: {{ $user->name }}</div>
 
                 <div class="card-body">
                     @if (session('success'))
-                        <div class="alert alert-success border-0 shadow-sm" role="alert"> {{-- Tambahkan border-0 shadow-sm --}}
+                        <div class="alert alert-success border-0 shadow-sm" role="alert"> 
                             {{ session('success') }}
                         </div>
                     @endif
                     @if (session('error'))
-                        <div class="alert alert-danger border-0 shadow-sm" role="alert"> {{-- Tambahkan border-0 shadow-sm --}}
+                        <div class="alert alert-danger border-0 shadow-sm" role="alert"> 
                             {{ session('error') }}
                         </div>
                     @endif
@@ -66,14 +66,14 @@
                             @enderror
                             <small class="form-text text-muted">Akan diubah jika Anda mengisi kolom ini.</small>
                         </div>
-                        <div class="mb-4"> {{-- mb-4 untuk sedikit lebih banyak jarak di bawah --}}
+                        <div class="mb-4"> 
                             <label for="password_confirmation" class="form-label">
                                 <i class="bi bi-key-fill me-2"></i>Konfirmasi Password Baru
                             </label>
                             <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                         </div>
 
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> {{-- Menggunakan d-grid --}}
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
                             <button type="submit" class="btn btn-primary">
                                 <i class="bi bi-save-fill me-2"></i>Simpan Perubahan
                             </button>

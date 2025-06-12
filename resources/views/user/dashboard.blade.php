@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card shadow-sm"> {{-- Tambahkan shadow-sm di card utama --}}
+            <div class="card shadow-sm"> 
                 <div class="card-header">Dashboard Warga EcoPantau</div>
 
                 <div class="card-body">
@@ -21,14 +21,14 @@
 
                     <h4 class="mb-4">Selamat datang, {{ Auth::user()->name }}!</h4>
 
-                    <div class="alert alert-info border-0 shadow-sm" role="alert"> {{-- Tambahkan border-0 shadow-sm --}}
+                    <div class="alert alert-info border-0 shadow-sm" role="alert"> 
                         Terima kasih telah berpartisipasi dalam menjaga kebersihan lingkungan Anda.
                         Mari laporkan tumpukan sampah liar di sekitar Anda!
                     </div>
 
                     <div class="row mb-4">
                         <div class="col-md-6 mb-3">
-                            <div class="card text-white bg-primary shadow-sm h-100 border-0"> {{-- Tambahkan shadow-sm dan border-0 --}}
+                            <div class="card text-white bg-primary shadow-sm h-100 border-0">
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <h5 class="card-title"><i class="bi bi-file-earmark-plus me-2"></i>Buat Laporan Baru</h5>
                                     <p class="card-text">Laporkan tumpukan sampah di sekitar Anda dengan cepat dan mudah.</p>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <div class="card text-white bg-secondary shadow-sm h-100 border-0"> {{-- Tambahkan shadow-sm dan border-0 --}}
+                            <div class="card text-white bg-secondary shadow-sm h-100 border-0"> 
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <h5 class="card-title"><i class="bi bi-journal-text me-2"></i>Riwayat Laporan Saya</h5>
                                     <p class="card-text">Lihat semua laporan yang pernah Anda buat dan statusnya.</p>
@@ -51,14 +51,14 @@
 
                     <h5 class="mt-4 mb-3">Laporan Terbaru Anda</h5>
                     @if ($userReports->isEmpty())
-                        <div class="alert alert-warning border-0 shadow-sm text-center py-4" role="alert"> {{-- Tambahkan border-0 shadow-sm text-center py-4 --}}
+                        <div class="alert alert-warning border-0 shadow-sm text-center py-4" role="alert"> 
                             <i class="bi bi-info-circle-fill me-2"></i> Anda belum memiliki laporan. Yuk, buat laporan pertama Anda!
                             <p class="mt-2 mb-0">Klik tombol "Mulai Laporan" di atas untuk memulai.</p>
                         </div>
-                        {{-- Tombol Buat Laporan Sekarang dihapus karena sudah ada di kartu aksi cepat --}}
+
                     @else
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover"> {{-- Tambahkan table-hover --}}
+                            <table class="table table-bordered table-striped table-hover"> 
                                 <thead>
                                     <tr>
                                         <th>ID</th>

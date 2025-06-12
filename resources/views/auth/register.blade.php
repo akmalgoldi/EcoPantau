@@ -9,8 +9,6 @@
         </div>
         <div class="card-body">
             <div class="register-logo">
-                {{-- Anda bisa menempatkan logo gambar di sini jika punya --}}
-                {{-- <img src="{{ asset('images/your-logo.png') }}" alt="EcoPantau Logo"> --}}
                 <h1>{{ config('app.name', 'EcoPantau') }}</h1>
             </div>
 

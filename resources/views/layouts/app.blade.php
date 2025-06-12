@@ -17,14 +17,12 @@
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    {{-- HAPUS BLOK <style> INI DAN SEMUA GAYA DARI BLOK <style> SEKARANG ADA DI resources/sass/_custom.scss --}}
 </head>
 <body>
-    <div id="app" class="d-flex flex-column min-vh-100"> {{-- Tambahkan class ini untuk sticky footer --}}
+    <div id="app" class="d-flex flex-column min-vh-100"> 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand text-dark" href="{{ Auth::check() ? url('/home') : url('/') }}">
-                    {{-- Anda bisa ganti dengan <img> logo Anda di sini --}}
                     {{ config('app.name', 'EcoPantau') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -98,7 +96,7 @@
             </div>
         </nav>
 
-        <main class="py-4 flex-grow-1"> {{-- Tambahkan class ini untuk sticky footer --}}
+        <main class="py-4 flex-grow-1"> 
             @yield('content')
         </main>
 

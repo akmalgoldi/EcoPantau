@@ -10,18 +10,13 @@ use Illuminate\Support\Facades\Auth; // Tambahkan ini
 class AdminMiddleware
 {
     /**
-     * Handle an incoming request.
-     *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {
-        // Pastikan pengguna sudah login dan memiliki peran 'Admin RT'
-        if (Auth::check() && Auth::user()->isAdmin()) {
+    { 
+        if (Auth::check() && Auth::user()->isAdmin()) { // Pastikan pengguna sudah login dan memiliki peran 'Admin RT'
             return $next($request);
         }
-
-        // Jika tidak, arahkan kembali ke '/home' dengan pesan error
-        return redirect('/home')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
+        return redirect('/home')->with('error', 'Anda tidak memiliki akses ke halaman ini.');// Jika tidak, arahkan kembali ke '/home' dengan pesan error
     }
 }

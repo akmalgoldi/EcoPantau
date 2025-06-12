@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Report;    // Pastikan model Report diimport
-use App\Models\User;     // Pastikan model User diimport
-use App\Models\ReportStatus; // <--- PASTIKAN INI DIIMPORT
+use App\Models\Report;    
+use App\Models\User;     
+use App\Models\ReportStatus; 
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -29,25 +29,23 @@ class DashboardController extends Controller
         })->count();
 
         // --- BAGIAN TAMBAHAN UNTUK DATA GRAFIK STATISTIK ---
-        $reportStatuses = ReportStatus::all(); // Ambil semua status laporan yang tersedia
-        $statusCounts = []; // Untuk menyimpan jumlah laporan per status
-        $statusLabels = []; // Untuk menyimpan nama status sebagai label grafik
-        $statusColors = [ // Definisi warna untuk setiap status (bisa disesuaikan)
-            'Baru' => '#ffc107',    // Kuning (Bootstrap warning)
-            'Diproses' => '#17a2b8', // Biru muda (Bootstrap info)
-            'Selesai' => '#28a745',  // Hijau (Bootstrap success)
-            'Default' => '#6c757d',  // Abu-abu (Bootstrap secondary), sebagai fallback
+        $reportStatuses = ReportStatus::all(); 
+        $statusCounts = []; 
+        $statusLabels = []; 
+        $statusColors = [ 
+            'Baru' => '#ffc107',    
+            'Diproses' => '#17a2b8', 
+            'Selesai' => '#28a745',  
+            'Default' => '#6c757d',  
         ];
-        $chartDataColors = []; // Untuk menyimpan warna yang akan digunakan di grafik
+        $chartDataColors = []; 
 
         foreach ($reportStatuses as $status) {
             $count = Report::where('report_status_id', $status->id)->count();
-            $statusCounts[] = $count; // Tambahkan jumlah laporan ke array
-            $statusLabels[] = $status->name; // Tambahkan nama status ke array label
-            // Ambil warna berdasarkan nama status, jika tidak ada gunakan warna 'Default'
+            $statusCounts[] = $count; 
+            $statusLabels[] = $status->name; 
             $chartDataColors[] = $statusColors[$status->name] ?? $statusColors['Default'];
         }
-        // --- AKHIR BAGIAN TAMBAHAN ---
 
         // Mengirim semua data (termasuk data grafik) ke view dashboard admin
         return view('admin.dashboard', compact(
@@ -56,9 +54,9 @@ class DashboardController extends Controller
             'processedReports',
             'completedReports',
             'totalUsers',
-            'statusCounts',    // Data jumlah laporan per status
-            'statusLabels',    // Label nama status
-            'chartDataColors'  // Warna untuk grafik
+            'statusCounts',   
+            'statusLabels',    
+            'chartDataColors'  
         ));
     }
 }

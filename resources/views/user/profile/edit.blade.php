@@ -51,14 +51,14 @@
                             @enderror
                             <small class="form-text text-muted">Minimal 8 karakter.</small>
                         </div>
-                        <div class="mb-4"> {{-- mb-4 untuk sedikit lebih banyak jarak di bawah --}}
+                        <div class="mb-4"> 
                             <label for="password_confirmation" class="form-label">
                                 <i class="bi bi-key-fill me-2"></i>Konfirmasi Password Baru
                             </label>
                             <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                         </div>
 
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> {{-- Menggunakan d-grid untuk tombol --}}
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
                             <button type="submit" class="btn btn-primary">
                                 <i class="bi bi-save-fill me-2"></i>Update Profil
                             </button>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card shadow-sm"> {{-- Tambahkan shadow-sm --}}
+            <div class="card shadow-sm"> 
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @if (session('error')) {{-- Tambahkan penanganan error jika ada --}}
+                    @if (session('error')) 
                         <div class="alert alert-danger" role="alert">
                             {{ session('error') }}
                         </div>
@@ -26,7 +26,7 @@
                         <p class="small text-muted mb-4">Jika tidak ada pengalihan otomatis, klik tombol di bawah.</p>
                     </div>
 
-                    <div class="d-grid"> {{-- Gunakan d-grid untuk tombol full-width --}}
+                    <div class="d-grid"> 
                         @auth
                             @if (Auth::user()->isAdmin())
                                 <a href="{{ route('admin.dashboard') }}" class="btn btn-primary btn-lg">
@@ -37,13 +37,13 @@
                                     <i class="bi bi-box-arrow-right me-2"></i>Lanjutkan ke Dashboard Warga
                                 </a>
                             @else
-                                {{-- Fallback jika role tidak dikenali --}}
+                                
                                 <a href="{{ url('/') }}" class="btn btn-primary btn-lg">
                                     <i class="bi bi-house-door-fill me-2"></i>Kembali ke Halaman Utama
                                 </a>
                             @endif
                         @else
-                            {{-- Ini seharusnya tidak tercapai karena halaman ini butuh login --}}
+                            
                             <a href="{{ route('login') }}" class="btn btn-primary btn-lg">
                                 <i class="bi bi-box-arrow-in-right me-2"></i>Kembali ke Halaman Login
                             </a>

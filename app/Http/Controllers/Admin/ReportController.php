@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Report;      // Pastikan model Report diimport
-use App\Models\ReportStatus; // Pastikan model ReportStatus diimport
+use App\Models\Report;      
+use App\Models\ReportStatus; 
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -12,7 +12,7 @@ class ReportController extends Controller
     // Menampilkan daftar semua laporan untuk admin
     public function index()
     {
-        $reports = Report::with(['user', 'status'])->latest()->paginate(10); // Ambil laporan dengan relasi user dan status, diurutkan terbaru
+        $reports = Report::with(['user', 'status'])->latest()->paginate(10);
         return view('admin.reports.index', compact('reports'));
     }
 

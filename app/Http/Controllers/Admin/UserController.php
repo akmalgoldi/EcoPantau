@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User; // Pastikan model User diimport
-use App\Models\Role; // Pastikan model Role diimport
+use App\Models\User; 
+use App\Models\Role; 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash; // Untuk hashing password
-use Illuminate\Validation\Rule; // Untuk validasi unique email
-use Illuminate\Support\Facades\Auth; // <--- PASTIKAN INI ADA
+use Illuminate\Support\Facades\Hash; 
+use Illuminate\Validation\Rule; 
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -55,7 +55,6 @@ class UserController extends Controller
     // Menghapus pengguna
     public function destroy(User $user)
     {
-        // Pastikan admin tidak menghapus dirinya sendiri jika ada fitur pencegahan
         if (Auth::user()->id === $user->id) {
             return redirect()->route('admin.users.index')->with('error', 'Anda tidak bisa menghapus akun Anda sendiri.');
         }
